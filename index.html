@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LBA Lanscape and Hardscape LLC</title>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- NAVBAR -->
+        <div class="logo">
+            <img src="Landscape Logo copy.png" alt="LBA Logo">
+        </div>
+
+        <nav id="nav">
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero fade">
+        <div>
+            <h1>Built Clean. Built Right.</h1>
+            <p>Modern landscaping & construction that lasts.</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="fade">
+        <h2 style="text-align:center;">Services</h2>
+        <div class="services">
+            <div><h3>Landscaping</h3><p>Clean outdoor design.</p></div>
+            <div><h3>Hardscaping</h3><p>Patios & walkways.</p></div>
+            <div><h3>Maintenance</h3><p>Reliable upkeep.</p></div>
+            <div><h3>Construction</h3><p>Precision builds.</p></div>
+        </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="fade">
+        <h2 style="text-align:center;">Our Work</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="fade">
+        <div class="about">
+        <h2>About</h2>
+            <p>
+            We focus on clean design, quality work, and building outdoor spaces
+            that feel intentional. No shortcuts—just solid results.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact fade">
+        <h2>Lets Connect!</h2>
+
+        <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number">
+            <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+            <button type="submit" class="btn submit-btn">Send</button>
+        </form>
+
+        <div id="success-message">
+            <h3 style="color: var(--primary);">Message Sent ✓</h3>
+            <p>Thanks for reaching out. We’ll get back to you shortly.</p>
+        </div>
+
+        <div class="contact-info-box">
+            <h2>Contact Info</h2>
+            <p><strong>Phone:</strong> <em>LEO</em> (862)955-9652 &ensp; <em>BRYAN</em> (862)982-9273 &ensp; <em>ACKERLEY</em> (973)653-0381</p>
+            <p><strong>Email:</strong> lbalandscape@gmail.com</p>
+            <p><strong>Location:</strong> 80 Main Street, Butler, NJ  07405</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="fade">
+        © 2026 LBA Landscape and Hardscape LLC.
+    </footer>
+
+<script src="script.js" async defer></script>
+
+
+</body>
+</html>
