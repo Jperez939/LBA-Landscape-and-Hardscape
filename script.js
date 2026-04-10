@@ -40,3 +40,9 @@ form.addEventListener("submit", async function(e) {
     alert("Something went wrong. Please try again.");
   }
 });
+
+// HEADER SCROLL EFFECT
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
