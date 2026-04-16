@@ -217,3 +217,12 @@ footer{
   padding:20px;
   color:var(--gray);
 }
+
+@media only screen and (max-width: 520px) {
+  .hero h1{
+  font-size:3rem;
+  }
+  .hero{
+  padding:100px 7%;
+  } 
+}
