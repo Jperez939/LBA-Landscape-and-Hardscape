@@ -3,108 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LBA Landscape & Hardscape LLC</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>LBA Lanscape and Hardscape LLC</title>
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <!-- NAVBAR -->
-        <div class="logo">
-            <img src="Landscape Logo copy.png" alt="LBA Logo">
-        </div>
 
-        <nav id="nav">
+
+<body>
+
+    <header>
+        <div class="logo"><img src="Landscape Logo copy.png"></div>
+        <nav class="nav-menu">
             <a href="#">Home</a>
-            <a href="#services">Services</a>
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </header>
 
     <!-- HERO -->
-    <section class="hero fade">
+    <section class="hero">
         <div>
-            <h1>Built Clean. Built Right.</h1>
-            <p>Modern landscaping & construction that lasts.</p>
-            <a href="#contact" class="btn">Contact Us</a>
+            <h1>LBA Landscape & Hardscape LLC</h1>
+            <span>Built by family. Designed to last.</span>
         </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="fade">
-        <h2 style="text-align:center;">Services</h2><br>
-        <div class="services">
-            <div><h3>Landscaping</h3> <br> <p>Landscape Design<br>Mulch<br>Trimming</p></div>
-            <div><h3>Hardscaping</h3> <br> <p>Patios<br>Pavers<br>Retaining Walls<br>Concrete<br>Masonry</p></div>
-            <div><h3>Maintenance</h3> <br> <p>Lawn Maintenance<br>Seasonal Cleanups<br>Snow Plowing<br>Power Washing</p></div>
-            <div><h3>Construction</h3> <br> <p>Excavating<br>Foundations<br>Home Renovations</p></div>
+    <section class="services">
+        <h2>Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-block">
+                <h3>Outdoor Maintenance</h3>
+                <ul>
+                    <li><br>Lawn Maintenance</li>
+                    <li>Trimming</li>
+                    <li>Mulch</li>
+                    <li>Seasonal Cleanups</li>
+                    <li>Snow Plowing</li>
+                </ul>
+            </div>
+
+            <div class="service-block">
+                <h3>Landscape & Exterior</h3>
+                <ul>
+                    <li><br>Landscape Design</li>
+                    <li>Power Washing</li>
+                    <li>Patios</li>
+                    <li>Pavers</li>
+                    <li>Retaining Walls</li>
+                    </ul>
+            </div>
+
+            <div class="service-block">
+                <h3>Construction</h3>
+                <ul>
+                    <li><br>Masonry</li>
+                    <li>Concrete</li>
+                    <li>Excavating</li>
+                    <li>Foundations</li>
+                    <li>Chimney</li>
+                    <li>Home Renovations</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
-    <!-- WORK -->
-    <section id="work" class="fade">
-        <h2 style="text-align:center;">Our Work</h2> <br>
-        <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-            <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29">
-            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    <!-- BEFORE AFTER -->
+    <section class="ba-section">
+
+        <div class="ba-header">
+            <h2>Before & After</h2>
         </div>
+
+        <div class="ba-wrapper">
+
+            <div class="ba-buttons">
+                <button class="ba-btn active" onclick="switchSet(0)">Landscape</button>
+                <button class="ba-btn" onclick="switchSet(1)">Hardscape</button>
+                <button class="ba-btn" onclick="switchSet(2)">Patios</button>
+                <button class="ba-btn" onclick="switchSet(3)">Walls</button>
+                <button class="ba-btn" onclick="switchSet(4)">Masonry</button>
+            </div>
+
+            <div class="ba-container">
+
+                <img id="beforeImg" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+
+                <div class="after-wrapper" id="afterWrapper">
+                    <img id="afterImg" src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29">
+                </div>
+
+                <div class="label before-label">BEFORE</div>
+                <div class="label after-label">AFTER</div>
+
+                <div class="ba-line" id="baLine"></div>
+
+                <input type="range" id="baSlider" min="0" max="100" value="50">
+
+            </div>
+        </div>
+
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="fade">
-        <div class="about">
-        <h2>About</h2> <br>
-            <p>
-            We focus on clean design, quality work, and building outdoor spaces
-            that feel intentional. No shortcuts—just solid results.
-            </p>
+    <!-- FAMILY -->
+    <section class="family">
+        <h2>About LBA</h2>
+        <br>
+        <p>A family-owned company built by Leo and his sons Bryan and Ackerley.<br>We focus on quality work, reliability, and long-term relationships with every client.</p>
+
+        <div class="family-contacts">
+            <div><strong>Leo Hernandez</strong><p>(862) 377-1571</p></div>
+            <div><strong>Bryan Hernandez</strong><p>(862) 600-8400</p></div>
+            <div><strong>Ackerley Hernandez</strong><p>(973) 955-9652</p></div>
         </div>
+
+        <p style="margin-top:30px;"><strong>Email:</strong> lbalandscape@gmail.com</p>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact fade">
-        <h2>Lets Connect!</h2> <br>
-
-        <form id="contact-form" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number">
-            <textarea name="message" placeholder="Tell us about your project..." required></textarea>
-            <button type="submit" class="btn submit-btn">Send</button>
+    <section id="contact" class="contact">
+        <h2 style="text-align:center;">Request an Estimate</h2>
+        <br>
+        <form id="form">
+            <input name="name" placeholder="Name" required>
+            <input name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Project details"></textarea>
+            <button>Send Request</button>
         </form>
 
-        <div id="success-message">
-            <h3 style="color: var(--primary);">Message Sent ✓</h3>
-            <p>Thanks for reaching out. We’ll get back to you shortly.</p>
-        </div> <br>
-
-        <div class="contact-info-box">
-            <h2>Contact Info</h2> <br>
-            <p><strong>Phone:</strong> <em>LEO</em> (862)377-1571 &ensp; <em>BRYAN</em> (862)600-8400 &ensp; <em>ACKERLEY</em> (973)955-9652</p>
-            <p><strong>Email:</strong> lbalandscape@gmail.com</p>
-            <p><strong>Location:</strong> 80 Main Street, Butler, NJ  07405</p>
-        </div>
+        <div id="success">Request sent ✓</div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="fade">
-        © 2026 LBA Landscape and Hardscape LLC.
+    <footer>
+        © 2026 LBA Landscape & Hardscape LLC
     </footer>
 
-<script src="script.js" async defer></script>
-
+    <script src="script.js" async defer></script>
 
 </body>
 </html>
