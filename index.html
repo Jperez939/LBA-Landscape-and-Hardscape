@@ -76,39 +76,40 @@
     <!-- BEFORE AFTER -->
     <section class="ba-section">
 
-        <div class="ba-header">
-            <h2>Before & After</h2>
-        </div>
+  <h2 class="ba-header">Before & After</h2>
 
-        <div class="ba-wrapper">
+  <div class="ba-buttons">
+    <button class="ba-btn active" onclick="switchSet(0)">Landscape</button>
+    <button class="ba-btn" onclick="switchSet(1)">Hardscape</button>
+    <button class="ba-btn" onclick="switchSet(2)">Patios</button>
+    <button class="ba-btn" onclick="switchSet(3)">Walls</button>
+    <button class="ba-btn" onclick="switchSet(4)">Masonry</button>
+  </div>
 
-            <div class="ba-buttons">
-                <button class="ba-btn active" onclick="switchSet(0)">Landscape</button>
-                <button class="ba-btn" onclick="switchSet(1)">Hardscape</button>
-                <button class="ba-btn" onclick="switchSet(2)">Patios</button>
-                <button class="ba-btn" onclick="switchSet(3)">Walls</button>
-                <button class="ba-btn" onclick="switchSet(4)">Masonry</button>
-            </div>
+  <div class="ba-container">
 
-            <div class="ba-container">
+    <!-- BEFORE -->
+    <img id="beforeImg" class="ba-img" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
 
-                <img id="beforeImg" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+    <!-- AFTER -->
+    <img id="afterImg" class="ba-img after-img" src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29">
 
-                <div class="after-wrapper" id="afterWrapper">
-                    <img id="afterImg" src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29">
-                </div>
+    <!-- LABELS -->
+    <span class="label before-label">BEFORE</span>
+    <span class="label after-label">AFTER</span>
 
-                <div class="label before-label">BEFORE</div>
-                <div class="label after-label">AFTER</div>
+    <!-- SLIDER HANDLE -->
+    <div class="ba-handle" id="baHandle"></div>
 
-                <div class="ba-line" id="baLine"></div>
+  </div>
 
-                <input type="range" id="baSlider" min="0" max="100" value="50">
+  <!-- MOBILE TOGGLE -->
+  <div class="mobile-toggle">
+    <button onclick="showBefore()">Before</button>
+    <button onclick="showAfter()">After</button>
+  </div>
 
-            </div>
-        </div>
-
-    </section>
+</section>
 
     <!-- FAMILY -->
     <section class="family">
