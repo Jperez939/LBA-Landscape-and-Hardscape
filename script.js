@@ -71,28 +71,23 @@ function switchSet(i){
   buttons[i].classList.add("active");
 }
 
-/* MOBILE BUTTONS (NOW CORRECT) */
-function showBefore(){
-  afterImg.style.clipPath = "inset(0 100% 0 0)";
-}
-
-function showAfter(){
-  afterImg.style.clipPath = "inset(0 0% 0 0)";
-}
-
-
 // FORM
-document.getElementById("form").addEventListener("submit",async e=>{
+document.getElementById("form").addEventListener("submit", async function(e){
   e.preventDefault();
 
-  const res=await fetch("https://formspree.io/f/yourID",{
-    method:"POST",
-    body:new FormData(e.target),
-    headers:{'Accept':'application/json'}
+  const form = e.target;
+  const data = new FormData(form);
+
+  const res = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: { 'Accept': 'application/json' }
   });
 
-  if(res.ok){
-    e.target.style.display="none";
-    document.getElementById("success").style.display="block";
+  if (res.ok) {
+    form.reset();
+    document.getElementById("success").style.display = "block";
+  } else {
+    alert("Something went wrong. Try again.");
   }
 });

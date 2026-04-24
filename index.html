@@ -103,12 +103,6 @@
 
   </div>
 
-  <!-- MOBILE TOGGLE -->
-  <div class="mobile-toggle">
-    <button onclick="showBefore()">Before</button>
-    <button onclick="showAfter()">After</button>
-  </div>
-
 </section>
 
     <!-- FAMILY -->
@@ -130,14 +124,43 @@
     <section id="contact" class="contact">
         <h2 style="text-align:center;">Request an Estimate</h2>
         <br>
-        <form id="form">
-            <input name="name" placeholder="Name" required>
-            <input name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Project details"></textarea>
-            <button>Send Request</button>
+
+        <form id="form" action="https://formspree.io/f/YOUR_ID" method="POST" enctype="multipart/form-data">
+
+            <input type="text" name="name" placeholder="Full Name" required>
+
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <input type="tel" name="phone" placeholder="Phone Number">
+
+            <!-- PROJECT TYPE -->
+            <select name="project_type" required>
+                <option value="">Select Project Type</option>
+                <option>Landscape</option>
+                <option>Hardscape</option>
+                <option>Patio</option>
+                <option>Retaining Wall</option>
+                <option>Masonry</option>
+                <option>General Inquiry</option>
+            </select>
+
+            <!-- MESSAGE -->
+            <textarea name="message" placeholder="Tell us about your project..."></textarea>
+
+            <!-- FILE UPLOAD -->
+            <label style="font-size:0.9rem; margin-top:10px;">
+                Upload Photos (optional)
+            </label>
+            <input type="file" name="attachment" accept="image/*">
+
+            <!-- SUBJECT -->
+            <input type="hidden" name="_subject" value="New Estimate Request - LBA Landscape">
+
+            <button type="submit">Send Request</button>
+
         </form>
 
-        <div id="success">Request sent ✓</div>
+        <div id="success">Request sent ✓ We'll get back to you soon.</div>
     </section>
 
     <footer>

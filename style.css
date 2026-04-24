@@ -50,8 +50,6 @@ nav a
   background:white;
 }
 .services h2{
-  font-family:'Playfair Display',serif;
-  color:var(--primary);
   margin-bottom:40px;
 }
 .services-grid{
@@ -71,8 +69,6 @@ nav a
 
 /* BEFORE AFTER */
 .ba-header{
-  font-family:'Playfair Display',serif;
-  color:var(--primary);
   margin-bottom:20px;
 }
 
@@ -151,36 +147,6 @@ nav a
 .before-label{left:10px;}
 .after-label{right:10px;}
 
-/* MOBILE */
-.mobile-toggle{
-  display:none;
-  margin-top:15px;
-}
-
-.mobile-toggle button{
-  padding:10px 20px;
-  margin:5px;
-  border:none;
-  background:var(--primary);
-  color:white;
-}
-
-/* MOBILE MODE */
-@media(max-width:768px){
-
-  .ba-container{
-    cursor:default;
-  }
-
-  .ba-handle{
-    display:none;
-  }
-
-  .mobile-toggle{
-    display:block;
-  }
-}
-
 /* FAMILY */
 .family{
   background:var(--light);
@@ -226,6 +192,17 @@ button{
   margin-top:20px;
   color:green;
 }
+select {
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+input[type="file"] {
+  margin-bottom: 15px;
+}
+
 
 footer{
   text-align:center;
@@ -240,4 +217,9 @@ footer{
   .hero{
   padding:100px 7%;
   } 
+}
+
+h2{
+  font-family:'Playfair Display',serif;
+  color:var(--primary);
 }
