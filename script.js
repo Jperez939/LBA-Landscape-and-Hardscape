@@ -72,22 +72,28 @@ function switchSet(i){
 }
 
 // FORM
-document.getElementById("form").addEventListener("submit", async function(e){
+const form = document.getElementById("form");
+
+form.addEventListener("submit", async function(e){
   e.preventDefault();
 
-  const form = e.target;
   const data = new FormData(form);
 
-  const res = await fetch(form.action, {
-    method: "POST",
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  });
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
 
-  if (res.ok) {
-    form.reset();
-    document.getElementById("success").style.display = "block";
-  } else {
-    alert("Something went wrong. Try again.");
+    if (res.ok) {
+      form.reset();
+      document.getElementById("success").style.display = "block";
+    } else {
+      alert("Form failed to send.");
+    }
+
+  } catch (error) {
+    alert("Network error. Try again.");
   }
 });
