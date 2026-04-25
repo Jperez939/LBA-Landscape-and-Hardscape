@@ -72,28 +72,3 @@ function switchSet(i){
 }
 
 // FORM
-const form = document.getElementById("form");
-
-form.addEventListener("submit", async function(e){
-  e.preventDefault();
-
-  const data = new FormData(form);
-
-  try {
-    const res = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (res.ok) {
-      form.reset();
-      document.getElementById("success").style.display = "block";
-    } else {
-      alert("Form failed to send.");
-    }
-
-  } catch (error) {
-    alert("Network error. Try again.");
-  }
-});

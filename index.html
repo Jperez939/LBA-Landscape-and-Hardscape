@@ -125,17 +125,14 @@
         <h2 style="text-align:center;">Request an Estimate</h2>
         <br>
 
-        <form id="form" action="https://formspree.io/f/mbdqwwqk" method="POST" enctype="multipart/form-data">
+        <form action="https://formspree.io/f/mbdqwwqk" method="POST" enctype="multipart/form-data">
 
             <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone">
 
-            <input type="email" name="email" placeholder="Email Address" required>
-
-            <input type="tel" name="phone" placeholder="Phone Number">
-
-            <!-- PROJECT TYPE -->
             <select name="project_type" required>
-                <option value="">Select Project Type</option>
+                <option value="">Project Type</option>
                 <option>Landscape</option>
                 <option>Hardscape</option>
                 <option>Patio</option>
@@ -144,17 +141,9 @@
                 <option>General Inquiry</option>
             </select>
 
-            <!-- MESSAGE -->
-            <textarea name="message" placeholder="Tell us about your project..."></textarea>
+            <textarea name="message" placeholder="Project details"></textarea>
 
-            <!-- FILE UPLOAD -->
-            <label style="font-size:0.9rem; margin-top:10px;">
-                Upload Photos (optional)
-            </label>
-            <input type="file" name="attachment" accept="image/*">
-
-            <!-- SUBJECT -->
-            <input type="hidden" name="_subject" value="New Estimate Request - LBA Landscape">
+            <input type="hidden" name="_subject" value="New Estimate Request - LBA">
 
             <button type="submit">Send Request</button>
 
